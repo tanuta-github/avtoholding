@@ -1,0 +1,33 @@
+.search-form {
+    margin-top: -10rem;
+    position: relative;
+    @include respond-to(xxl) { 
+      border-radius: 0.3rem;
+      margin: -1.4rem 2.8rem 0;
+    } 
+    @include respond-to(xs) { 
+      margin: 0;
+    } 
+    .container {
+      background: #19395f;
+      min-height: 23rem;
+      max-width: 1170px;
+    }
+    &__title {
+      color: #fff;
+      text-align: center;
+      font-size: 2.8rem;
+      letter-spacing: 0.2rem;
+      font-weight: 400;
+      padding: 1.4rem 0 0;
+      text-transform: uppercase;
+      @include respond-to(md) { 
+        font-size: 1.5rem;
+      } 
+      @include respond-to(xs) { 
+        font-size: 1rem;
+      } 
+    }
+  
+  }
+  

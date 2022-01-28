@@ -1,0 +1,92 @@
+.banner {
+    .container {
+      position: absolute;
+      z-index: 50;
+      top: 8.5rem;
+      left: 0;
+      right: 0;
+      @include respond-to(md) { 
+        top: 3.9rem;
+      }
+      @include respond-to(xs) { 
+        top: 1.07rem;
+        padding: 0 1.4rem;
+      } 
+    }
+    .carousel-indicators {
+      bottom: 10rem;
+      @include respond-to(xxl) { 
+        bottom: 0.7rem;
+      }
+      @include respond-to(xs) { 
+        display: none;
+      } 
+      li {
+        border-radius: 50%;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: 0 1.07rem;
+        background-color: $color-green;
+        @include respond-to(xxl) { 
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+      }
+    }
+    &__title {
+      font-size: 2.8rem;
+      color: $color-green;
+      letter-spacing: 0.07rem;
+      @include respond-to(md) { 
+        font-size: 1.7rem;
+        letter-spacing: 0;
+      }
+      @include respond-to(xs) { 
+        font-size: 1.4rem;
+      } 
+    }
+    &__text {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: $color-blue;
+      @include respond-to(md) { 
+        font-size: 1.42rem;
+        letter-spacing: 0;
+        margin-bottom: 2.4rem;
+      }
+      @include respond-to(xs) {
+        font-size: 1.17rem;
+        margin-bottom: 1.4rem;
+      }
+    }
+    &__btn  {
+      display: inline-block;
+      background: $color-green;
+      color: $color-white;
+      padding: 0 3.2rem;
+      font-size: 1.14rem;
+      line-height: 2.8;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 0.3rem;
+      @include respond-to(md) { 
+          padding: 0 1.8rem;
+          line-height: 2.4;
+      }
+      @include respond-to(xs) { 
+        line-height: 2.5rem;
+      } 
+      &:hover {
+          color: $color-white;
+      }
+    }
+    img {
+      margin-top: -22rem;
+      @include respond-to(md) { 
+        margin-top: -14rem;
+      }
+      @include respond-to(xs) { 
+        margin-top: -3.2rem;
+      }
+    }
+  }

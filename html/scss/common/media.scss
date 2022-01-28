@@ -1,0 +1,11 @@
+@mixin respond-to($media) {
+    @if $media == xxl {
+      @media (max-width: $xxl) { @content; }
+    }
+    @else if $media == md {
+      @media (max-width: $md) { @content; }
+    }
+    @else if $media == xs {
+      @media (max-width: $xs) { @content; }
+    }
+}
