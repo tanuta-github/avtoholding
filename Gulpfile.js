@@ -1,17 +1,14 @@
-'use strict';
+let gulp     = require('gulp'),
+browserSync  = require('browser-sync').create(),
+sass         = require('gulp-sass')(require('sass')),
+cssmin     = require('gulp-clean-css');
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
-var cssmin = require('gulp-cssmin');
 
 gulp.task('sass', function () {
     return gulp.src('./html/scss/style.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(cssmin())
-        .pipe(gulp.dest('./html/css/'))
-        .pipe(reload({stream:true}));
+    .pipe(sass().on('error', sass.logError))
+    .pipe(cssmin())
+    .pipe(gulp.dest('./html/css/'));
 });
 
 gulp.task('watch', function () {
@@ -21,10 +18,5 @@ gulp.task('watch', function () {
         }
     });
 
-  gulp.watch(['./html/scss/**/*.scss'], ['sass']);
+  gulp.watch(['./html/scss/**/*.scss'], gulp.series('sass'));
 });
-
-gulp.task('build', [
-    'sass'
-]);
-
